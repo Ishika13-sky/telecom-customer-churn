@@ -1,6 +1,10 @@
 # telecom-customer-churn
 
 
+🚀 Live Demo
+👉 https://telecom-customer-churn-5vmapsga4noyczl2ukvngu.streamlit.app
+
+
 1. ### Description
 A machine learning project that predicts customer churn for a marketing agency using a logistic regression model built from scratch in NumPy — implementing the sigmoid function, cross-entropy cost function, and gradient descent manually, without using scikit-learn's LogisticRegression API.
 The project covers the full data science pipeline: business understanding → exploratory data analysis → feature engineering → model training → evaluation → prediction on unseen customer data.
@@ -68,5 +72,3 @@ The model correctly identifies 98% of customers who will not churn — very stro
 This low recall on the minority class is a direct consequence of class imbalance (86% no churn, 14% churn) and the linear decision boundary of logistic regression. The model
 
 
-## 🚀 Live Demo
-👉 https://telecom-customer-churn-5vmapsga4noyczl2ukvngu.streamlit.app
