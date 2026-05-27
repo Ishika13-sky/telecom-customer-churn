@@ -65,35 +65,8 @@ Optimiser: Gradient descent — learning rate 0.001, 10,000 iterations
 
 ### Interpretation
 The model correctly identifies 98% of customers who will not churn — very strong performance on the majority class. However, it captures only 47% of actual churners, missing more than half of at-risk customers.
-This low recall on the minority class is a direct consequence of class imbalance (86% no churn, 14% churn) and the linear decision boundary of logistic regression. The model is not yet reliable enough for production deployment — but the findings clearly quantify the problem and motivate the next version.
-
-8. ### Financial impact
-Using realistic marketing agency assumptions:
-
-Average monthly revenue per client: $2,000
-Cost of proactive retention outreach: $200 per client
-
-OutcomeCountFinancial impactTrue Positives — churners caught15$2,000 × 15 = +$30,000 savedFalse Positives — unnecessary outreach3$200 × 3 = -$600 costFalse Negatives — churners missed17$2,000 × 17 = -$34,000 lostNet estimated impact-$4,600
-The negative net impact is an honest and important result. It confirms that 47% churn recall is not sufficient for profitable deployment. Improving recall from 47% to 75% — a realistic target with SMOTE and ensemble methods — would flip this calculation to a significant positive return.
-
-9. ### Limitations and next steps
-Current limitation
-The model's 47% recall on churners means the majority of at-risk customers are not flagged. This is caused by:
-
-Class imbalance — churners are only 14% of the dataset
-No oversampling applied in this version
-Linear decision boundary of logistic regression
-
-Version 2 — planned improvements
-
-SMOTE (Synthetic Minority Oversampling Technique) to address class imbalance and improve churn recall
-Model comparison: Logistic Regression vs Random Forest vs XGBoost
-SHAP values for feature importance and business interpretability
-Streamlit web app for live churn probability predictions with a public deployment URL
+This low recall on the minority class is a direct consequence of class imbalance (86% no churn, 14% churn) and the linear decision boundary of logistic regression. The model
 
 
-10. ### New customer predictions
-The trained model was applied to a holdout set of new customers provided by the agency (without churn labels). The output identifies which customers are predicted to churn — these are the clients to prioritise for immediate account manager assignment.
-
-
-
+## 🚀 Live Demo
+👉 https://telecom-customer-churn-5vmapsga4noyczl2ukvngu.streamlit.app
